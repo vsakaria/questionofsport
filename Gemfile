@@ -34,6 +34,9 @@ end
 group :tools do
   gem "guard-test"
 end
+
+gem 'devise'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -48,3 +51,5 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+
