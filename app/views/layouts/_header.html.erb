@@ -22,9 +22,17 @@
 
       <nav>
           <ul>
-            <li><a id="about" href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="sign"><a href="#">Sign In</a></li>
+              
           </ul>
+
+          <div class="sign-in">
+                <h1>Sign In:</h1>
+                <ul>
+                <li> <%= link_to image_tag("http://icons.iconarchive.com/icons/fasticon/web-2/256/Twitter-icon.png", :class => "Twitter-Logo"), 'auth/twitter' %></li>
+                <li><img class="Facebook-Logo" src="http://trailertrash413.com/wordpress/wp-content/uploads/2011/11/facebook_icon_02.png" alt="Facebook Logo"/></li>
+              </ul>
+            </div>
       </nav>
 
 

@@ -15,8 +15,12 @@
 //= require_tree .
 
 $(document).ready(function(){
-  $('.quiz-trigger').on('click', function (){
-    $(this).closest('.quiz-trigger').find('.questions').slideToggle();
+  $('.sign').on('click', function (){
+    $('.sign-in').slideToggle('600');
+  })
+
+  $('#quiz-trigger').on('click', function (){
+    $('#questions').slideToggle('400');
   })
 
 });
