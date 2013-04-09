@@ -1,14 +1,16 @@
 Questionofsport::Application.routes.draw do
 
-match '/auth/:provider/callback' =&gt; 'authentications#create'
+match '/auth/:provider/callback' => 'sessions#create'
+match 'signout', to: 'sessions#destroy', as: 'signout'
 
-  root :to => 'comments#index'
+  root :to => 'users#index'
 
   resources :comments
+  resources :users
 
 
-  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
-                    controllers: {omniauth_callbacks: "omniauth_callbacks"}
+  # devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+  #                   controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
