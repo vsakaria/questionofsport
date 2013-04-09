@@ -1,11 +1,14 @@
 Questionofsport::Application.routes.draw do
 
-  root :to => 'comments#index'
+match '/auth/:provider/callback' =&gt; 'authentications#create'
 
-  resources :users
+  root :to => 'comments#index'
 
   resources :comments
 
+
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+                    controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
