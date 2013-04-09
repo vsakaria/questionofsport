@@ -17,10 +17,9 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-rails'
+  gem 'jquery-ui-rails'
 end
-
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
 
 gem 'pg'
 gem "debugger", "~> 1.4.0"
