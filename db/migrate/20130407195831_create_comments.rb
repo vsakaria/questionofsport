@@ -1,4 +1,4 @@
-class CreateComments < ActiveRecord::Migration
+class CreateComments < Aggitit branchctiveRecord::Migration
   def change
     create_table :comments do |t|
       t.string :comment, :presence => true
