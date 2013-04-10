@@ -49,7 +49,7 @@ h1 {
 .title-font {
   height: 40px;
   margin-left: 0;
-  border-bottom-right-radius: 5px; 
+  border-bottom-right-radius: 5px;
   padding-left: 27px;
   padding-bottom: 5px;
   background-color: white;
@@ -70,7 +70,7 @@ h1 {
 .title-pics ul li {
   float: right;
  display: inline-block;
- margin-right: 10px; 
+ margin-right: 10px;
  padding-left: 23px;
 }
 
@@ -84,7 +84,7 @@ h1 {
 .red {
   width: 100%;
   height: 50px;
-  border-top-left: 5px; 
+  border-top-left: 5px;
   margin-left: -2.2%;
   padding-left: 0;
   margin-right: -2%;
@@ -106,12 +106,12 @@ nav ul li {
 nav ul li a {
   color: white;
   font-family:'offside', cursive;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
 nav ul li a:hover {
   color: blue;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 #about {
@@ -123,13 +123,13 @@ footer {
   background-color: red;
   height: 3.125em;
   margin-left: -2.2%;
-  
+
   }
 
   footer ul {
   text-align: center;
   margin-right: 20px;
-  
+
 }
 
 footer ul li {
@@ -142,19 +142,19 @@ footer ul li {
 footer ul li a {
   color: white;
   font-family:'offside', cursive;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
 footer ul li a:hover {
   color: blue;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 #copy {
   float: right;
 }
 
-.questions {
-  display: none;
+#questions {
+
 
 }
