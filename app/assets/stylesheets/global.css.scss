@@ -8,7 +8,14 @@ body {
 
 }
 
+.surround-container {
+  /*background-color: green;*/
+  /*margin-top: -20px;*/
+
+}
+
 .main-container {
+  /*font-family: 'Merriweather Sans', sans-serif;*/
   margin: auto;
   padding-bottom: 20px;
   max-width: 90%;
@@ -21,6 +28,11 @@ body {
 .main-page-wrapper {
   width: 60%;
   margin: auto;
+  background-color: white;
+  border: 3px solid #d7dfea;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 5px 5px 5px #777777;
 }
 
 li {
@@ -39,6 +51,15 @@ h1 {
 /*  padding-left: 10px;*/
 }
 
+.logos a {
+  color: white;
+}
+
+.logos a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
 .logo {
   position: relative;
 }
@@ -48,6 +69,7 @@ h1 {
   width: 210px;
 
 }
+
 
 .icon-cogs {
   margin-right: 30px;
@@ -108,6 +130,7 @@ h1 {
   margin-left: -2.2%;
   padding-left: 0;
   margin-right: -2%;
+  margin-bottom: 20px;
   background-color: red;
 }
 nav{
@@ -135,6 +158,17 @@ nav ul li a:hover {
   color: blue;
   text-decoration: none; 
 }
+.ask-btn {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  height: 25px;
+  width: 100px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px #777777;
+}
 
 #about {
   padding-left: 25px;
@@ -143,7 +177,7 @@ nav ul li a:hover {
 footer {
   max-width: 100%;
   background-color: red;
-  height: 3.125em;
+  /*height: 3.125em;*/
   margin-left: -2.2%;
   margin-top: 20px;
   
@@ -173,8 +207,14 @@ footer ul li a:hover {
   text-decoration: none; 
 }
 
+.f-row{
+  width: 100%;
+}
+
 #copy {
   float: right;
+  font-size: 10px;
+  color: white;
 }
 
 #questions {
@@ -225,6 +265,7 @@ footer ul li a:hover {
   margin-left: 0;
   padding-top: 22px;
   color: white;
+  font-family: 'offside', cursive;
   
 }
 

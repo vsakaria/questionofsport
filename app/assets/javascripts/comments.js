@@ -14,6 +14,7 @@ $(document).ready(function(){
   })
 
   $('#quiz-trigger').on('click', function (){
+    // $('.ask-questions').removeClass(.'ask-questions');
     $('#questions').slideToggle('400');
   })
 
