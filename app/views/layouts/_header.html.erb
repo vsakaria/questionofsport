@@ -1,45 +1,82 @@
 <header>
   <div class="title-container">
-  <div class="row top-row">
+      <div class="row top-row clearfix">
 
-      <div class="span 5 logo">
-        <img src="http://www.round-one.co.uk/images/projects/qos_01.jpg" alt="logo"/>
+        <div class="span 5 logo">
+          <img src="http://www.round-one.co.uk/images/projects/qos_01.jpg" alt="logo"/>
+        </div>
+
+        <div class="span11 title-pics">
+          <ul>
+            <li><img src="http://static.guim.co.uk/sys-images/Sport/Pix/pictures/2012/8/5/1344200215879/Usain-Bolt-wins-011.jpg" alt="Usain Bolt"/></li>
+            <li><img src="http://3.bp.blogspot.com/-rvAWOUXLL_Y/UQ7Fwg7HyoI/AAAAAAAAGjM/hs4qiiBcFqo/s1600/Lionel+Messi.jpg" alt="Lionel Messi"/></li>
+            <li><img src="http://www.samaa.tv/NewsPictures/20121226032_samaa_tv.jpg" alt="Nadal"/>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="span11 title-pics">
-      <ul>
-      <li><img src="http://static.guim.co.uk/sys-images/Sport/Pix/pictures/2012/8/5/1344200215879/Usain-Bolt-wins-011.jpg" alt="Usain Bolt"/></li>
-      <li><img src="http://3.bp.blogspot.com/-rvAWOUXLL_Y/UQ7Fwg7HyoI/AAAAAAAAGjM/hs4qiiBcFqo/s1600/Lionel+Messi.jpg" alt="Lionel Messi"/></li>
-      <li><img src="http://www.samaa.tv/NewsPictures/20121226032_samaa_tv.jpg" alt="Nadal"/>
-      </ul>
-      </div>
-  </div>
+  <div class="row red clearfix">
 
- <div class="row red">
       <div class="span6 title-font">
         <h1>A Question of Sport</h1>
       </div>
 
-      <nav>
-          <ul>
-            <li class="sign"><a href="#">Sign In</a></li>
-              
-          </ul>
+      <nav class="span8">
 
-          <div class="sign-in">
+        <div>
+          <!-- <a href="#"> -->
+            <% if current_user %>
+            
+                <div class='signed-in span5'>  
+                  Signed in as <%= current_user.name %>
+                  <span id="sign-out"><%= link_to "Sign out", signout_path %></span>
+                </div>
+              
+                <div class="logos span3">
+                  <a class="test" href="#">Test</a>
+                  <a class="test2" href="#">Test2</a>
+                </div>
+             
+            <% else %>
+              <div class='sign-in-link'>
+                <a href="#">Sign in</a>
+              </div>
+            <% end %>
+          <!-- </a> -->
+        </div>
+              
+          <div class="sign-in-box">
                 <h1>Sign In:</h1>
                 <ul>
                 <li> <%= link_to image_tag("http://icons.iconarchive.com/icons/fasticon/web-2/256/Twitter-icon.png", :class => "Twitter-Logo"), 'auth/twitter' %></li>
                 <li><img class="Facebook-Logo" src="http://trailertrash413.com/wordpress/wp-content/uploads/2011/11/facebook_icon_02.png" alt="Facebook Logo"/></li>
               </ul>
-            </div>
-      </nav>
+          </div>
+
+          <div class="settings">
+                <h1>Settings:</h1>
+                <ul>
+                <li> Name</li>
+                <li> Blah Blah</li>
+                <li> Blah</li>
+              </ul>
+          </div>
+
+          <div class="stats">
+                <h1>Statistics:</h1>
+                <ul>
+                <li> No.of questions answered</li>
+                <li> No. of correct answer</li>
+                <li> Correct answer percentage</li>
+              </ul>
+          </div>
+        </nav>
 
 
-  </div>
+    </div>
  
-</div>
+  </div>
 
-
-      </header>
+</header>
   
