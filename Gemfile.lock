@@ -50,6 +50,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    font-awesome-rails (3.0.2.0)
+      railties (>= 3.1)
     guard (1.6.2)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
@@ -152,6 +154,7 @@ DEPENDENCIES
   ansi
   coffee-rails (~> 3.2.1)
   debugger (~> 1.4.0)
+  font-awesome-rails
   guard
   guard-test
   jquery-rails

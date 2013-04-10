@@ -18,6 +18,10 @@ body {
   padding-top: 1%;
   background-color: white;
 }
+.main-page-wrapper {
+  width: 60%;
+  margin: auto;
+}
 
 li {
   list-style: none;
@@ -26,6 +30,13 @@ li {
 h1 {
   font-size: 2em;
   color: red;
+}
+.logos {
+  color: white;
+  padding-top: 10px;
+  text-align: right;
+  /*margin-left: 10px;*/
+/*  padding-left: 10px;*/
 }
 
 .logo {
@@ -37,6 +48,12 @@ h1 {
   width: 210px;
 
 }
+
+.icon-cogs {
+  margin-right: 30px;
+}
+
+
 .title {
   background-color: white;
   padding-top: 1%;
@@ -254,6 +271,18 @@ footer ul li a:hover {
   border-radius: 5px;
   width: 30%;
   height: 200px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 5px 5px 5px #777777;
+}
+
+.question-form{
+  background-color: white;
+  display: none;
+  border: 3px solid #d7dfea;
+  border-radius: 5px;
+  width: 40%;
+  height: 125px;
   margin: auto;
   text-align: center;
   box-shadow: 5px 5px 5px #777777;

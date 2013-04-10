@@ -1,40 +1,47 @@
+<!--   <div class="main-page-wrapper span8"> -->
+              
+    <h2>Got a tasty sports-based question?</h2>
+        <button class="ask-btn">Ask it!</button>
+          <div class="question-form">
+            <h1>Question</h1>
+        </div>
+        
+        <h1 id="quiz-trigger">Click here if you're ready to get Quizzing!</h1>
 
+            <div id="questions">
+            
 
-  <h1 id="quiz-trigger">Click here if you're ready to get Quizzing!</h1>
+            <table>
+              <tr>
+              <th>Comment</th>
+              <th>Answer</th>
+              <th>Rightanswers</th>
+              <th>Wronganswers</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
 
-  <div id="questions">
-  
+          <% @comments.each do |comment| %>
+            <tr>
+              <td><%= comment.comment %></td>
+              <td><%= comment.answer %></td>
+              <td><%= comment.rightanswers %></td>
+              <td><%= comment.wronganswers %></td>
+              <td><%= link_to 'Show', comment %></td>
+              <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+              <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+          </table>
 
-  <table>
-    <tr>
-    <th>Comment</th>
-    <th>Answer</th>
-    <th>Rightanswers</th>
-    <th>Wronganswers</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+          <br />
 
-<% @comments.each do |comment| %>
-  <tr>
-    <td><%= comment.comment %></td>
-    <td><%= comment.answer %></td>
-    <td><%= comment.rightanswers %></td>
-    <td><%= comment.wronganswers %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+          <%= link_to 'New Comment', new_comment_path %>
 
-<br />
+          </div>
 
-<%= link_to 'New Comment', new_comment_path %>
-
-</div>
-
+<!-- </div> -->
 
 
 
