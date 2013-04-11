@@ -7,11 +7,14 @@
           <div class="question-form">
             <h1>Question</h1>
         </div>
-    </div>
+
         
         <h1 id="quiz-trigger">If not, click to get quizzing!</h1>
 
-            <div id="questions">
+    </div>      
+
+      <!-- <div class="question-wrapper"></div> -->
+      <div id="questions">
             
 
             <table>
@@ -38,12 +41,22 @@
           <% end %>
           </table>
 
+          <div class="logos span3">
+              <a class="icons" href="#">
+                <i class="icon-ok-circle icon-4x true"></i>
+              </a>
+              <a class="icons" href="#">
+              <i class="icon-remove-circle icon-4x false"></i>
+              <a/>
+            </div>
           <br />
 
           <%= link_to 'New Comment', new_comment_path %>
 
+           
           </div>
-
+        <!-- </div> -->
+           
 </div>
 
 

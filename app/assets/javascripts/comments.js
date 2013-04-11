@@ -11,15 +11,21 @@ $(document).ready(function(){
   $('.graph').on('click', function (){
     $('.settings').hide();
     $('.stats').slideToggle('600');
+    $(this).animate({'top': '-10px'});
   })
 
+  // $('#quiz-trigger').on('click', function (){
+  //   $('.main-page-wrapper').append('#questions');
+  //   $('.ask-question').remove();
+  // })
+
   $('#quiz-trigger').on('click', function (){
-    // $('.ask-questions').removeClass(.'ask-questions');
-    $('#questions').slideToggle('400');
+    $('.ask-question').hide();
+    $('#questions').show();
   })
 
   $('.ask-btn').on('click', function (){
-    $('.question-form').slideToggle('400');
+    $('.question-form').fadeToggle('400');
   })
 
 });
