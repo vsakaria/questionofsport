@@ -14,22 +14,3 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(document).ready(function(){
-  $('.sign-in-link').on('click', function (){
-    $('.sign-in-box').slideToggle('600');
-  })
-
-  $('.test').on('click', function (){
-    $('.stats').removeClass('.stats');
-    $('.settings').slideToggle('600');
-  })
-
-  $('.test2').on('click', function (){
-    $('.stats').slideToggle('600');
-  })
-
-  $('#quiz-trigger').on('click', function (){
-    $('#questions').slideToggle('400');
-  })
-
-});

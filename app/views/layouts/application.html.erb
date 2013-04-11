@@ -4,13 +4,8 @@
   <title>Questionofsport</title>
   <link href='http://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+
   <%= javascript_include_tag "application" %>
-
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-
-
 
   <%= csrf_meta_tags %>
 </head>
@@ -19,9 +14,13 @@
 
     <%= render 'layouts/header' %>
 
-  
+  <div id="ask_question">
+    <%= render 'form' %>
+  </div>
 
-<%= yield %>
+  <h1 id="quiz-trigger">Click here if you're ready to get Quizzing!</h1>
+
+      <%= yield %>
 
   <%= render 'layouts/footer' %>
   </div>

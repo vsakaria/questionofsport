@@ -1,33 +1,20 @@
-<%= form_for(@comment) do |f| %>
-  <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-      <ul>
-      <% @comment.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= form_for(@comment, :remote => true ) do |f| %>
   <div class="field">
     <%= f.label :comment %><br />
     <%= f.text_field :comment %>
   </div>
-  <div class="field">
-    <%= f.label :answer %><br />
-    <%= f.check_box :answer %>
+
+   <div id="true">
+    <%= f.label "True" %>
+    <%= f.radio_button :answer, "1" %>
   </div>
-  <div class="field">
-    <%= f.label :rightanswers %><br />
-    <%= f.text_field :rightanswers %>
-  </div>
-  <div class="field">
-    <%= f.label :wronganswers %><br />
-    <%= f.text_field :wronganswers %>
-  </div>
+
+    <div id="false">
+    <%= f.label "False" %>
+    <%= f.radio_button :answer, "0" %>
+    </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :id => 'comment_submit'%>
   </div>
 <% end %>
