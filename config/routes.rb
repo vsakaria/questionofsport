@@ -1,5 +1,8 @@
 Questionofsport::Application.routes.draw do
 
+  resources :answers
+
+
 match '/auth/:provider/callback' => 'sessions#create'
 match 'signout', to: 'sessions#destroy', as: 'signout'
 
