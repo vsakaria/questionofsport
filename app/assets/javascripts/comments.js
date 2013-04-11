@@ -1,13 +1,53 @@
+
 $(function() {
 
   $("form#new_comment").on("ajax:success", function(){
-      $("#questions").load("/comments/display_all_comments", function(){
-        console.log("success")
-        bind_slide();
-      });
+      $("#questions").load("/comments/display_all_comments", function(){})
   }).bind( "ajax:error", function(a,b,c){
     $("form#new_comment").append("</br><p>ERROR</p>")
+  });//on and bind closed
+
+  $('.sign-in-link').on('click', function (){
+    $('.sign-in-box').slideToggle('600')
   });
+
+  $('.cog').on('click', function (){
+    $('.stats').hide();
+    $('.settings').slideToggle('600');
+  });
+
+  $('.graph').on('click', function (){
+    $('.settings').hide();
+    $('.stats').slideToggle('600');
+  });
+
+  $('#quiz-trigger').on('click', function (){
+    $('.ask-question').hide();
+    $('#questions').show();
+  });
+
+  $('.ask-btn').on('click', function (){
+    $('.question-form').fadeToggle('400');
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Bind to rails' form successfully submitted function
     // load questions again
@@ -24,25 +64,47 @@ $(function() {
   //   $('.stats').slideToggle('600');
   // })
 
-bind_slide();
+// bind_slide();
 
-  function bind_slide(){
-    $('#quiz-trigger').off('click');
-    $('#quiz-trigger').on('click', function (){
-    $('#questions').slideToggle('400');
-  });
-  }
+//   function bind_slide(){
+//     $('#quiz-trigger').off('click');
+//     $('#quiz-trigger').on('click', function (){
+//     $('#questions').slideToggle('400');
+//   });
+//   }
 
-})
-  // $('form#new_comment').submit(function() {
+// })
 
-  //     $.post().success(){
-  //       // form submitted ok? no errors?
-  //       // load the info
-  //     };
-  //     :success function {
-  //        $("#questions").load('/comments', function(data, status, xhr){
-  //     }
 
-  //   })
-  // });//Form click function
+// $(document).ready(function(){
+//   $('.sign-in-link').on('click', function (){
+//     $('.sign-in-box').slideToggle('600');
+//   })
+
+//   $('.cog').on('click', function (){
+//     $('.stats').hide();
+//     $('.settings').slideToggle('600');
+//   })
+
+//   $('.graph').on('click', function (){
+//     $('.settings').hide();
+//     $('.stats').slideToggle('600');
+//     $(this).animate({'top': '-10px'});
+//   })
+
+//   // $('#quiz-trigger').on('click', function (){
+//   //   $('.main-page-wrapper').append('#questions');
+//   //   $('.ask-question').remove();
+//   // })
+
+//   $('#quiz-trigger').on('click', function (){
+//     $('.ask-question').hide();
+//     $('#questions').show();
+//   })
+
+//   $('.ask-btn').on('click', function (){
+//     $('.question-form').fadeToggle('400');
+//   })
+
+// });
+
