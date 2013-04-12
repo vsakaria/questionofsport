@@ -23,11 +23,18 @@ $(function() {
 
   $('#quiz-trigger').on('click', function (){
     $('.ask-question').hide();
-    $('#questions').show();
+    $('.thanks').hide();
+    $('.questions').show();
   });
 
-  $('.ask-btn').on('click', function (){
+  $('#ask-btn').on('click', function (){
     $('.question-form').fadeToggle('400');
+  });
+
+  $('.actions').on('click', function (){
+    $('.question-form').hide();
+    $('.tasty').hide();
+    $('.thanks').show();
   });
 
 });

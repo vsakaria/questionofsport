@@ -1,18 +1,28 @@
 <%= form_for(@comment, :remote => true ) do |f| %>
+
+
   <div class="field">
-    <%= f.label :comment %><br />
-    <%= f.text_field :comment %>
-  </div>
-
-   <div id="true">
-    <%= f.label "True" %>
-    <%= f.radio_button :answer, "1" %>
-  </div>
-
-    <div id="false">
-    <%= f.label "False" %>
-    <%= f.radio_button :answer, "0" %>
+    <div class="label">
+    <%= f.label "Question:" %>
     </div>
+    <div class="q-input">
+    <%= f.text_field :comment %>
+    </div>
+  
+</div>
+
+  <div class="true-false">
+     <div id="true">
+      <%= f.label "True" %>
+      <%= f.radio_button :answer, "1" %>
+    </div>
+
+
+      <div id="false">
+      <%= f.label "False" %>
+      <%= f.radio_button :answer, "0" %>
+      </div>
+  </div>
 
   <div class="actions">
     <%= f.submit :id => 'comment_submit'%>

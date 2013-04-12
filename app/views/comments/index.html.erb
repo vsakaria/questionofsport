@@ -1,55 +1,60 @@
 
   <div class="main-page-wrapper">
 
-    <div class="ask-question">
-    <h2>Got a tasty sports-based question?</h2>
-        <button class="ask-btn">Ask it!</button>
+
+    <h2 class="thanks">Back of the net! Thanks for your question.
+    </br>
+    Got another one?</h2>
+
+      <div class="ask-question">
+        <h2 class="tasty">Got a tasty sports-based question?</h2>
+          <button id="ask-btn">Ask it!</button>
+
+          
           <div class="question-form">
-            <h1>Question</h1>
-        </div>
 
-<div id="questions">
+            <%= render 'form' %>
 
-
-
-  <table>
-    <tr>
-    <th>Comment</th>
-    <th>Answer</th>
-    <th>Rightanswers</th>
-    <th>Wronganswers</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @comments.each do |comment| %>
-  <tr>
-    <td><%= comment.comment %></td>
-    <td><%= comment.answer %></td>
-    <td><%= comment.rightanswers %></td>
-    <td><%= comment.wronganswers %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Question', new_comment_path %>
-
+          </div>
 
         <h1 id="quiz-trigger">If not, click to get quizzing!</h1>
 
+      </div>
+
+    <div class="questions">
+
+        <h2 class="question-h2"><span class="T">True</span> or <span class="F">False?</span></h2>
+
+
+          <table class="question-table">
+
+          <% @comments.each do |comment| %>
+            <tr>
+              <td><h3><%= comment.comment %></h3></td>
+              <!-- <td><%= comment.answer %></td>
+              <td><%= comment.rightanswers %></td>
+              <td><%= comment.wronganswers %></td> -->
+              <!-- td><%= link_to 'Show', comment %></td>
+              <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+              <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+            </tr>
+          <% end %>
+
+
+          </table>
+
+
+            <div class="true-false-buttons">
+              <a class="icons" href="#">
+                <i class="icon-ok-circle icon-4x T"></i>
+              </a>
+              <a class="icons" href="#">
+                <i class="icon-remove-circle icon-4x F"></i>
+              <a/>
+            </div>
 
     </div>
 
-      <!-- <div class="question-wrapper"></div> -->
-
-          </div>
-        <!-- </div> -->
 
 </div>
 
