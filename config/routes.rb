@@ -1,6 +1,6 @@
 Questionofsport::Application.routes.draw do
 
-  resources :answers
+
 
 
 match '/auth/:provider/callback' => 'sessions#create'
@@ -9,7 +9,12 @@ match 'signout', to: 'sessions#destroy', as: 'signout'
   root :to => 'comments#index'
 
   match "/comments/display_all_comments", to: 'comments#display_all_comments'
-  resources :comments
+
+
+  resources :comments do
+      resources :answers
+  end
+
   resources :users
 
 

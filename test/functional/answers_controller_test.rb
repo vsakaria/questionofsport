@@ -1,49 +1,11 @@
 require 'test_helper'
 
 class AnswersControllerTest < ActionController::TestCase
-  setup do
-    @answer = answers(:one)
+
+  test "User can answer a comment" do
+    assert_equal 0, Answer.count
+    post :create, {:comment_id => "1", :answer => {:user_id => "1", :comment_id => "1", :answer => "1" } }
+    assert_equal 1, Answer.count
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:answers)
-  end
-
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create answer" do
-    assert_difference('Answer.count') do
-      post :create, answer: { answer: @answer.answer, question_id: @answer.question_id, user_id: @answer.user_id }
-    end
-
-    assert_redirected_to answer_path(assigns(:answer))
-  end
-
-  test "should show answer" do
-    get :show, id: @answer
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, id: @answer
-    assert_response :success
-  end
-
-  test "should update answer" do
-    put :update, id: @answer, answer: { answer: @answer.answer, question_id: @answer.question_id, user_id: @answer.user_id }
-    assert_redirected_to answer_path(assigns(:answer))
-  end
-
-  test "should destroy answer" do
-    assert_difference('Answer.count', -1) do
-      delete :destroy, id: @answer
-    end
-
-    assert_redirected_to answers_path
-  end
 end

@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
 
   validates :name, :presence => true
 
-  has_many :comments, :answers
+  has_many :comments
+  has_many :answers
 
   def self.from_omniauth(auth)
     where(auth.slice("provider","uid")).first || create_from_omniauth(auth)

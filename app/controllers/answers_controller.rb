@@ -28,12 +28,13 @@ class AnswersController < ApplicationController
   end
 
   def create
+    debugger
     @answer = Answer.new(params[:answer])
 
     respond_to do |format|
       if @answer.save
-        format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
-        format.json { render json: @answer, status: :created, location: @answer }
+        format.html { redirect_to root_url, notice: 'Answer was successfully created.' }
+        format.json { render json: root_url, status: :created, location: @answer }
       else
         format.html { render action: "new" }
         format.json { render json: @answer.errors, status: :unprocessable_entity }
