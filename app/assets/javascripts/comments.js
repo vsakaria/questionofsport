@@ -21,7 +21,8 @@ $(function() {
     $('.stats').slideToggle('600');
   });
 
-  $('#quiz-trigger').on('click', function (){
+  $('#quiz-trigger').on('click', function (event){
+    event.preventDefault
     $('.ask-question').hide();
     $('.thanks').hide();
     $('.questions').show();
@@ -35,6 +36,16 @@ $(function() {
     $('.question-form').hide();
     $('.tasty').hide();
     $('.thanks').show();
+  });
+
+  $('.icon-ok-circle').on('click', function (){
+    $('.questions').hide();
+    $('#wrong').show();
+  });
+
+  $('.icon-remove-circle').on('click', function (){
+    $('.questions').hide();
+    $('#correct').show();
   });
 
 });

@@ -2,22 +2,22 @@
   <div class="main-page-wrapper">
 
 
-    <h2 class="thanks">Back of the net! Thanks for your question.
-    </br>
-    Got another one?</h2>
+      <h2 class="thanks">Back of the net! Thanks for your question.
+      </br>
+      Got another one?</h2>
 
       <div class="ask-question">
-        <h2 class="tasty">Got a tasty sports-based question?</h2>
+          <h2 class="tasty">Got a tasty sports-based question?</h2>
           <button id="ask-btn">Ask it!</button>
 
           
-          <div class="question-form">
+        <div class="question-form">
 
-            <%= render 'form' %>
+          <%= render 'form' %>
 
-          </div>
+        </div>
 
-        <h1 id="quiz-trigger">If not, click to get quizzing!</h1>
+        <h2 id="quiz-trigger"><a href="#">If not, click to get quizzing!</a></h2>
 
       </div>
 
@@ -50,11 +50,22 @@
               </a>
               <a class="icons" href="#">
                 <i class="icon-remove-circle icon-4x F"></i>
-              <a/>
+              </a>
             </div>
 
     </div>
 
+    <div class="answer-message" id="correct">
+        <h2 id="answer-h2">Home run! Well done!</h2>
+          <button id="next">Next question</button>
+
+    </div>
+
+    <div class="answer-message" id="wrong">
+        <h2 id="answer-h2">Missed a sitter! Unlucky!</h2>
+          <button id="next">Next question</button>
+
+    </div>
 
 </div>
 

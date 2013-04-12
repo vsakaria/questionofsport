@@ -1,3 +1,4 @@
+
 <%= form_for(@comment, :remote => true ) do |f| %>
 
 
@@ -25,6 +26,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit :id => 'comment_submit'%>
+    <%= f.submit "Submit answer", :id => 'comment_submit'%>
   </div>
 <% end %>
+
