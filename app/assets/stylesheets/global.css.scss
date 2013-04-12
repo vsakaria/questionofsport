@@ -15,12 +15,11 @@ body {
 }
 
 .main-container {
-  /*font-family: 'Merriweather Sans', sans-serif;*/
+  font-family: 'Merriweather Sans', sans-serif;
   margin: auto;
   padding-bottom: 20px;
   max-width: 90%;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  border-radius: 5px;
   padding-left:2%;
   padding-top: 1%;
   background-color: white;
@@ -174,7 +173,7 @@ nav ul li a:hover {
   color: blue;
   text-decoration: none;
 }
-.ask-btn {
+#ask-btn {
   background-color: red;
   color: white;
   font-size: 18px;
@@ -247,14 +246,19 @@ footer ul li a:hover {
   color: white;
 }
 
-#questions {
+.questions {
 
   /*display: none;*/
+  font-size: 20px;
   width: 80%;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
+}
+
+.question-h2 {
+  margin-bottom: 15px;
 }
 
 
@@ -363,33 +367,50 @@ footer ul li a:hover {
   margin: auto;
   text-align: center;
   box-shadow: 5px 5px 5px #777777;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+.question-table {
+  margin-bottom: 20px;
 }
 
-/*#questions {
-  margin-top: 30px;
-  color: white;
-  border-radius: 20px;
-  background-image: -o-linear-gradient(right bottom, rgb(230,14,50) 34%, rgb(255,132,38) 67%, rgb(255,192,66) 84%);
-background-image: -moz-linear-gradient(right bottom, rgb(230,14,50) 34%, rgb(255,132,38) 67%, rgb(255,192,66) 84%);
-background-image: -webkit-linear-gradient(right bottom, rgb(230,14,50) 34%, rgb(255,132,38) 67%, rgb(255,192,66) 84%);
-background-image: -ms-linear-gradient(right bottom, rgb(230,14,50) 34%, rgb(255,132,38) 67%, rgb(255,192,66) 84%);
-
-background-image: -webkit-gradient(
-  linear,
-  right bottom,
-  left top,
-  color-stop(0.34, rgb(230,14,50)),
-  color-stop(0.67, rgb(255,132,38)),
-  color-stop(0.84, rgb(255,192,66))
-);
-
+.questions {
+  display: none;
 }
-*/
-.true {
-  color: green;
+.icons a:hover{
+  color: blue;
+  text-decoration: none;
 }
 
-.false {
+.icon-ok-circle {
+  margin-right:40px;
+}
+
+/*.false {
   color: red;
+}*/
+
+.field > *{
+  display: inline-block;
+
 }
+
+.T {
+  color: forestgreen;
+}
+
+
+.F  {
+  color: crimson;
+}
+
+.true-false {
+  margin-bottom: 10px;
+  }
+
+.true-false > * {
+  display: inline-block;
+  }
+
+  .thanks {
+    display: none;
+  }
