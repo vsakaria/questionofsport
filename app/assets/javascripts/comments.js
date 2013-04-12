@@ -48,6 +48,11 @@ $(function() {
     $('#correct').show();
   });
 
+   $('#next').on('click', function (){
+    $('.answer-message').hide();
+    $('.questions').show();
+  });
+
 });
 
 
