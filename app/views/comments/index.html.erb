@@ -10,7 +10,7 @@
         <h2 class="tasty">Got a tasty sports-based question?</h2>
           <button id="ask-btn">Ask it!</button>
 
-          
+
           <div class="question-form">
 
             <%= render 'form' %>
@@ -21,6 +21,7 @@
 
       </div>
 
+<!-- Questions div -->
     <div class="questions">
 
         <h2 class="question-h2"><span class="T">True</span> or <span class="F">False?</span></h2>
@@ -28,33 +29,24 @@
 
           <table class="question-table">
 
-          <% @comments.each do |comment| %>
+          <% @comments %>
             <tr>
-              <td><h3><%= comment.comment %></h3></td>
-              <!-- <td><%= comment.answer %></td>
-              <td><%= comment.rightanswers %></td>
-              <td><%= comment.wronganswers %></td> -->
-              <!-- td><%= link_to 'Show', comment %></td>
-              <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-              <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+              <td><h3><%= @comments.comment %></h3></td>
             </tr>
-          <% end %>
-
 
           </table>
 
-
             <div class="true-false-buttons">
-              <a class="icons" href="#">
-                <i class="icon-ok-circle icon-4x T"></i>
-              </a>
-              <a class="icons" href="#">
-                <i class="icon-remove-circle icon-4x F"></i>
-              <a/>
+
+
+                <%= link_to "", comment_answers_path(@comments, @answer, {:answer => "yes"}), remote: true, method: :post, :class => "icon-ok-circle icon-4x T" %>
+
+                 <%= link_to "", comment_answers_path(@comments, @answer, {:answer => "no"}), remote: true, method: :post, :class => "icon-ok-circle icon-4x F" %>
+
             </div>
 
     </div>
-
+<!-- End questions show -->
 
 </div>
 

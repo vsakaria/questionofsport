@@ -3,10 +3,12 @@
       <div class="row top-row clearfix">
 
         <div class="span 5 logo">
+          <a href="<%= root_path %>">
           <img src="http://www.round-one.co.uk/images/projects/qos_01.jpg" alt="logo"/>
+          </a>
         </div>
 
-        <div class="span11 title-pics">
+        <div class="span10 title-pics">
           <ul>
             <li><img src="http://static.guim.co.uk/sys-images/Sport/Pix/pictures/2012/8/5/1344200215879/Usain-Bolt-wins-011.jpg" alt="Usain Bolt"/></li>
             <li><img src="http://3.bp.blogspot.com/-rvAWOUXLL_Y/UQ7Fwg7HyoI/AAAAAAAAGjM/hs4qiiBcFqo/s1600/Lionel+Messi.jpg" alt="Lionel Messi"/></li>
@@ -27,12 +29,12 @@
         <div>
           <!-- <a href="#"> -->
             <% if current_user %>
-            
-                <div class='signed-in span5'>  
+
+                <div class='signed-in span5'>
                   Signed in as <%= current_user.name %>
                   <span id="sign-out"><%= link_to "Sign out", signout_path %></span>
                 </div>
-              
+
                 <div class="logos span3">
                   <a class="icons" href="#">
                     <i class="icon-cogs icon-2x cog"></i>
@@ -41,7 +43,7 @@
                   <i class="icon-bar-chart icon-2x graph"></i>
                   <a/>
                 </div>
-             
+
             <% else %>
               <div class='sign-in-link'>
                 <a href="#">Sign in</a>
@@ -49,7 +51,7 @@
             <% end %>
           <!-- </a> -->
         </div>
-              
+
           <div class="sign-in-box">
                 <h1>Sign In:</h1>
                 <ul>
@@ -79,8 +81,8 @@
 
 
     </div>
- 
+
   </div>
 
 </header>
-  
+
