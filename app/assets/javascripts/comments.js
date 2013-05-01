@@ -1,11 +1,23 @@
 
 $(function() {
 
-  $("form#new_comment").on("ajax:success", function(){
-      $("#questions").load("/comments/display_all_comments", function(){})
-  }).bind( "ajax:error", function(a,b,c){
+  //Ajax request for new comment using remote :true
+  $("form#new_comment").on("ajax:success", function(){}).bind(
+    "ajax:error", function(a,b,c){
     $("form#new_comment").append("</br><p>ERROR</p>")
   });//on and bind closed
+
+  //Ajax request for answer using remote :true
+   $("a#true_false_button").on("ajax:success", function(){
+     /* Show a new window at bottom of div show right or wrong answer*/
+
+  }).bind( "ajax:error", function(a,b,c){
+    $("a#true_false_button").append("</br><p>ERROR</p>")
+  });
+
+
+
+
 
   $('.sign-in-link').on('click', function (){
     $('.sign-in-box').slideToggle('600')

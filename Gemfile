@@ -21,8 +21,8 @@ group :assets do
   gem 'jquery-ui-rails'
 end
 
-gem 'pg'
-gem "debugger", "~> 1.4.0"
+  gem 'pg'
+  gem "debugger", "~> 1.4.0"
 
 group :development do
   gem "guard" # the program that runs the tests on every file change
@@ -36,6 +36,9 @@ group :tools do
 end
 
 gem 'omniauth-twitter'
+
+gem 'factory_girl_rails'
+
 # gem 'devise'
 
 # gem 'omniauth-facebook'

@@ -2,7 +2,9 @@ require 'test_helper'
 
 class CommentsControllerTest < ActionController::TestCase
   setup do
-    @comment = comments(:one)
+    user = FactoryGirl.create(:user)
+    session[:user_id] = user.id
+    @comment = FactoryGirl.create(:comment)
   end
 
   test "should get index" do
@@ -11,39 +13,12 @@ class CommentsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:comments)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
   test "should create comment" do
     assert_difference('Comment.count') do
-      post :create, comment: { answer: @comment.answer, comment: @comment.comment, rightanswers: @comment.rightanswers, wronganswers: @comment.wronganswers }
+      post :create, comment: { answer: @comment.answer, comment: @comment.comment, rightanswers: @comment.rightanswers, wronganswers: @comment.wronganswers }, :format => :json
     end
 
-    assert_redirected_to comment_path(assigns(:comment))
+    assert_response(200)
   end
 
-  test "should show comment" do
-    get :show, id: @comment
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, id: @comment
-    assert_response :success
-  end
-
-  test "should update comment" do
-    put :update, id: @comment, comment: { answer: @comment.answer, comment: @comment.comment, rightanswers: @comment.rightanswers, wronganswers: @comment.wronganswers }
-    assert_redirected_to comment_path(assigns(:comment))
-  end
-
-  test "should destroy comment" do
-    assert_difference('Comment.count', -1) do
-      delete :destroy, id: @comment
-    end
-
-    assert_redirected_to comments_path
-  end
 end

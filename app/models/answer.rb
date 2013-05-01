@@ -1,6 +1,5 @@
 class Answer < ActiveRecord::Base
-  attr_accessible :answer, :comment_id, :user_id
-  attr_accessor :user_id, :comment_id
+  attr_accessible :input, :comment_id, :user_id
 
   belongs_to :comment
   belongs_to :user

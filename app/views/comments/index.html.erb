@@ -39,14 +39,19 @@
             <div class="true-false-buttons">
 
 
-                <%= link_to "", comment_answers_path(@comments, @answer, {:answer => "yes"}), remote: true, method: :post, :class => "icon-ok-circle icon-4x T" %>
+                <%= link_to "", comment_answers_path(@comments, @answer, {:answer => "1"}), remote: true, method: :post, :class => "icon-ok-circle icon-4x T true_false_button" %>
 
-                 <%= link_to "", comment_answers_path(@comments, @answer, {:answer => "no"}), remote: true, method: :post, :class => "icon-ok-circle icon-4x F" %>
+                 <%= link_to "", comment_answers_path(@comments, @answer, {:answer => "0"}), remote: true, method: :post, :class => "icon-ok-circle icon-4x F true_false_button" %>
 
             </div>
 
     </div>
+
 <!-- End questions show -->
+
+    <div id="answer">
+      You got the answer...
+    </div>
 
 </div>
 

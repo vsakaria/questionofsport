@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411160711) do
+ActiveRecord::Schema.define(:version => 20130501150446) do
 
   create_table "answers", :force => true do |t|
     t.integer  "comment_id"
     t.integer  "user_id"
-    t.boolean  "answer"
+    t.boolean  "input"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

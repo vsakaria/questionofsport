@@ -6,16 +6,13 @@ Questionofsport::Application.routes.draw do
 match '/auth/:provider/callback' => 'sessions#create'
 match 'signout', to: 'sessions#destroy', as: 'signout'
 
-  root :to => 'comments#index'
-
-  match "/comments/display_all_comments", to: 'comments#display_all_comments'
+root :to => 'comments#index'
 
 
-  resources :comments do
+resources :comments do
       resources :answers
   end
 
-  resources :users
 
 
   # devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
