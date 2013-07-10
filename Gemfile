@@ -21,23 +21,23 @@ group :assets do
   gem 'jquery-ui-rails'
 end
 
-  gem 'pg'
-  gem "debugger", "~> 1.4.0"
-
 group :development do
   gem "guard" # the program that runs the tests on every file change
   gem 'rb-fsevent', '~> 0.9.1' # required by guard
   gem "ansi" # makes the output coloured
   gem "terminal-notifier-guard"
+   gem "debugger", "~> 1.4.0"
 end
 
 group :tools do
   gem "guard-test"
+  gem 'factory_girl_rails'
 end
 
 gem 'omniauth-twitter'
 
-gem 'factory_girl_rails'
+gem 'pg'
+
 
 # gem 'devise'
 
