@@ -4,4 +4,9 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#   Mayor.create(name: 'Emanuel', city: cities.first
+
+Comment.create(comment: 'Andy Cole scored the winning in the 1999 CL final', answer: '1')
+Comment.create(comment: 'Andy Cole scored the winning in the 1999 CL final', answer: '1')
+Comment.create(comment: 'Andy Cole scored the winning in the 1999 CL final', answer: '1')
+Comment.create(comment: 'Andy Cole scored the winning in the 1999 CL final', answer: '1')

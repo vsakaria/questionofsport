@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
 
   def index
     @comment = Comment.new
-
     @comments = Comment.get_random_comment
   end
 
